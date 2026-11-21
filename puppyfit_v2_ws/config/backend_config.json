@@ -1,0 +1,75 @@
+{
+  "env": "prod",
+  "device": {
+    "device_id": "puppy_001",
+    "device_name": "PuppyPi Terminal",
+    "firmware_version": "v1.0.0"
+  },
+  "backend": {
+    "http_base_url": "http://122.51.12.83:8000",
+    "ws_camera_base_url": "ws://122.51.12.83:8000/ws/camera",
+    "api_paths": {
+      "login": "/api/auth/login",
+      "device_register": "/api/device/register",
+      "device_status": "/api/device/status",
+      "workout_start": "/api/workout/start",
+      "workout_count": "/api/workout/count",
+      "workout_status": "/api/workout/status",
+      "workout_stop": "/api/workout/stop",
+      "task_current": "/api/workout/status",
+      "task_start": "/api/workout/start",
+      "task_history": "/api/workout/records",
+      "task_complete": "/api/workout/stop",
+      "training_session_confirm": "/api/device/training-sessions/{session_id}/confirm",
+      "training_session_complete": "/api/device/training-sessions/{session_id}/complete",
+      "training_session_error": "/api/device/training-sessions/{session_id}/error",
+      "homework_query": "/api/voice/homework",
+      "sts_token": "/api/sts/token",
+      "video_notify": "/api/video/notify"
+    }
+  },
+  "auth": {
+    "login_type": "parent",
+    "username_env": "PUPPY_DEVICE_USER",
+    "password_env": "PUPPY_DEVICE_PASS",
+    "token_refresh_on_401": true
+  },
+  "mqtt": {
+    "broker_host": "122.51.12.83",
+    "broker_port": 1883,
+    "use_tls": false,
+    "enable_legacy_topic_compat": true,
+    "username_env": "PUPPY_MQTT_USER",
+    "password_env": "PUPPY_MQTT_PASS",
+    "client_id": "puppy_terminal_puppy_001",
+    "keepalive": 60,
+    "qos": 1,
+    "topics": {
+      "publish_file_notify": "puppy/file/notify/{device_id}",
+      "subscribe_control": "puppy/control/{device_id}",
+      "subscribe_file_status": "puppy/file/status/{device_id}"
+    },
+    "legacy_topics": {
+      "publish_file_notify": "puppy/{device_id}/file_notify",
+      "subscribe_control": "puppy/{device_id}/control",
+      "subscribe_file_status": "puppy/{device_id}/file_status"
+    }
+  },
+  "network": {
+    "http_timeout_sec": 8,
+    "http_max_retry": 3,
+    "ws_ping_interval_sec": 20,
+    "ws_reconnect_backoff_sec": [
+      1,
+      2,
+      4,
+      8,
+      16
+    ],
+    "mqtt_reconnect_delay_sec": 5
+  },
+  "logging": {
+    "level": "INFO",
+    "payload_log_enabled": true
+  }
+}

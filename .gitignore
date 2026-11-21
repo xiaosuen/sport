@@ -1,0 +1,10 @@
+puppyfit_ws/src/asr/models/sherpa-onnx-streaming-zipformer-small-bilingual-zh-en-2023-02-16.tar.bz2
+
+# ROS 2 colcon 构建产物与会话录像（勿提交）
+puppyfit_v2_ws/build/
+puppyfit_v2_ws/install/
+puppyfit_v2_ws/log/
+puppyfit_v2_ws/record_video/
+
+# 凭据文件（设备/MQTT 账号密码，勿提交）
+.env

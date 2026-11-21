@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>video_record_pkg</name>
+  <version>0.1.0</version>
+  <description>Subscribe session record start/stop + image topic; write MP4 under workspace record_video/</description>
+  <maintainer email="3490597208@qq.com">slt</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>ament_python</buildtool_depend>
+
+  <depend>rclpy</depend>
+  <depend>sensor_msgs</depend>
+  <depend>cv_bridge</depend>
+  <depend>session_record_msgs</depend>
+
+  <exec_depend>python3-numpy</exec_depend>
+  <!-- 会话录像：系统需安装 ffmpeg（rosdep: ffmpeg） -->
+
+  <test_depend>ament_copyright</test_depend>
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_pep257</test_depend>
+  <test_depend>python3-pytest</test_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

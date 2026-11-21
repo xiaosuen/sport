@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>exercise_engine_pkg</name>
+  <version>0.1.0</version>
+  <description>运动引擎：基于人体关键点做仰卧起坐判别与计数，可选 Web 仪表盘与后端上报。</description>
+  <maintainer email="3490597208@qq.com">ubuntu</maintainer>
+  <license>MIT</license>
+
+  <depend>rclpy</depend>
+  <depend>std_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>cv_bridge</depend>
+  <depend>robot_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>puppy_control_msgs</depend>
+  <depend>perception_pkg</depend>
+
+  <exec_depend>python3-numpy</exec_depend>
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+
+  <test_depend>ament_copyright</test_depend>
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_pep257</test_depend>
+  <test_depend>python3-pytest</test_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

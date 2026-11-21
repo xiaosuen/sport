@@ -1,0 +1,9 @@
+mediapipe
+numpy
+opencv-python
+paho-mqtt>=1.6.0
+pyserial
+setuptools
+sherpa-onnx
+sounddevice
+websocket-client

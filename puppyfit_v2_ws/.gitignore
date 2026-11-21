@@ -1,0 +1,9 @@
+# colcon 构建输出
+/build/
+/install/
+/log/
+
+# 会话录像输出（与 src 同级）
+/record_video/
+/recordings/
+/core
